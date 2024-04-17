@@ -2,12 +2,6 @@ export * from './indexer'
 import { EnvironmentConfig } from '../config';
 import { IServices } from '../services';
 
-// export type ContentSource = {
-//   basePath: string,
-//   sourceUri: string,
-//   sourceType:string
-// }
-
 export type Event = {
   path: string;
   parent?: Event|null;
