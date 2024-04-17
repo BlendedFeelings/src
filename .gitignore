@@ -1,0 +1,14 @@
+
+*.pyc
+src/.env-prod.bat
+src/llm/llm.zip
+src/.env
+src/indexer/coverage
+src/indexer/localStore_test.json
+src/indexer/localStore_test.json
+src/llm/node_modules
+/src/web/web
+src/web/web.zip
+src/web/web.zip
+src/web/web.zip
+src/web/web.zip

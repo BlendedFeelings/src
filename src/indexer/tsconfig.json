@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "moduleResolution": "node",
+		"module": "esnext",
+		"target": "esnext",
+    "sourceMap": true,
+    "skipDefaultLibCheck": true,
+    "outDir": "./dist",
+
+    "esModuleInterop": true
+    
+    //"declaration": true
+  },
+  "include": ["./lib/*","./index.ts", "lib/search/inMemorySearch.ts", "lib/search/search.ts", "lib/config.ts"],
+  "exclude": ["*.d.ts"]
+}
