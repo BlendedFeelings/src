@@ -53,6 +53,6 @@ When a single article is displayed:
 - [Markdown.svelte](src/web/src/lib/markdown/components/Markdown.svelte) renders Markdown AST
 
 When a list of articles is displayed:
-- one of [fetchStrategy](src/web/src/lib/webIndex/fetchStrategy.ts) is employed to get the list items: [latestFetchStrategy](src/web/src/lib/webIndex/latestFetchStrategy.ts), [randomFetchStrategy](src/web/src/lib/webIndex/randomFetchStrategy.ts), [searchFetchStrategy](src/web/src/lib/webIndex/searchFetchStrategy.ts), [allFoldersFetchStrategy](src/web/src/lib/webIndex/allFoldersFetchStrategy.ts)
+- one of [fetchStrategy](src/web/src/lib/webIndex/fetchStrategy.ts) is employed to get the list of items: [latestFetchStrategy](src/web/src/lib/webIndex/latestFetchStrategy.ts), [randomFetchStrategy](src/web/src/lib/webIndex/randomFetchStrategy.ts), [searchFetchStrategy](src/web/src/lib/webIndex/searchFetchStrategy.ts), [allFoldersFetchStrategy](src/web/src/lib/webIndex/allFoldersFetchStrategy.ts)
 - each item is processed and rendered
 
