@@ -1,4 +1,6 @@
-Source code of https://blendedfeelings.com/
+# Blended Feelings
+The repo contains source code for https://blendedfeelings.com,
+w website where you can browse through a variety of topics, explore new subjects and organizing knowldge effectively.
 
 
 ## Indexer
