@@ -2,7 +2,6 @@
 The repo contains source code for https://blendedfeelings.com,
 a website where you can browse through a variety of topics, explore new subjects and organizing knowldge effectively.
 
-
 ## Indexer
 
 The Indexer component, as the name suggests, is responsible for indexing documents into a store that can later be accessed by the web app.
@@ -41,4 +40,19 @@ The indexing process is divided into steps, each requiring the implementation of
 3. [`IncludesStep`](src/indexer/lib/indexer/includesStep.ts): Checks for external file inclusions within items. A external item can be included using the syntax [!INCLUDE url_to_include]. You can see an example [here](https://github.com/BlendedFeelings/software/blob/main/algorithms/sort/bubble-sort-algorithm.md). It fetches the content from the specified URL and stores it in `includesStore`.
 4. [`WebIndexStep`](src/indexer/lib/indexer/webIndexStep.ts): Prepares items for the web application by combining data from `indexStore` and `includesStore` into a single consumable entity.
 5. [`WebSearchStep`](src/indexer/lib/indexer/webSearchStep.ts): Indexes items in a full-text search service, facilitating search functionality  within the web application.
+
+
+## FrontEnd
+
+Built using https://kit.svelte.dev/
+
+Articles are stored in a store in markdown format.
+
+When a single article is displayed:
+- [markdown.ts](src/web/src/lib/markdown/processor/markdown.ts) processor uses https://github.com/syntax-tree/mdast packages to parse and create markdown Markdown AST
+- [Markdown.svelte](src/web/src/lib/markdown/components/Markdown.svelte) renders Markdown AST
+
+When a list of articles is displayed:
+- one of [fetchStrategy](src/web/src/lib/webIndex/fetchStrategy.ts) is employed to get the list items: [latestFetchStrategy](src/web/src/lib/webIndex/latestFetchStrategy.ts), [randomFetchStrategy](src/web/src/lib/webIndex/randomFetchStrategy.ts), [searchFetchStrategy](src/web/src/lib/webIndex/searchFetchStrategy.ts), [allFoldersFetchStrategy](src/web/src/lib/webIndex/allFoldersFetchStrategy.ts)
+- each item is processed and rendered
 
