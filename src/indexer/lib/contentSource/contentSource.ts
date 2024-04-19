@@ -25,10 +25,3 @@ export class ContentSourceItem {
 
 }
 
-export function createContentSource(type: string, options:any, loggerProvider:ILoggerProvider): IContentSource|null {
-    if (type === "GitHub")
-        return new GitHubContentSource({loggerProvider, ...options});
-    if (type === "FileSystem")
-        return new FileSystemContentSource({loggerProvider, ...options})
-    return null;
-}
