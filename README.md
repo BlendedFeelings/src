@@ -2,6 +2,11 @@
 The repo contains source code for https://blendedfeelings.com,
 a website where you can browse through a variety of topics, explore new subjects and organizing knowldge effectively.
 
+The application consists of two main components:
+
+- Indexer: A tool that crawls the repository (https://github.com/BlendedFeelings/software) and indexes all articles, making them searchable and easily accessible.
+- FrontEnd: A SvelteKit-based website that enables users to browse and search through the articles.
+
 ## Indexer
 
 The Indexer component, as the name suggests, is responsible for indexing documents into a store that can later be accessed by the web app.
