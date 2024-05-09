@@ -7,6 +7,8 @@ The application consists of two main components:
 - Indexer: A tool that crawls the repository (https://github.com/BlendedFeelings/software) and indexes all articles, making them searchable and easily accessible.
 - FrontEnd: A SvelteKit-based website that enables users to browse and search through the articles.
 
+Tools: TypeScript, SvelteKit
+
 ## Indexer
 
 The Indexer component, as the name suggests, is responsible for indexing documents into a store that can later be accessed by the web app.
