@@ -89,7 +89,7 @@ export class IndexStep implements IStep{
 		}
 
 		indexItem = {
-			path: folder.path,
+			path: event.path,
 			type: folder.type,
 			title: null,
 			content: null,

@@ -28,7 +28,7 @@ export class MeilisearchSearch implements ISearch {
     }
 
     async addOrUpdate(item: SearchIndexableItem|SearchIndexableItem[]): Promise<any> {
-        this.logger.debug('addOrUpdate');
+        this.logger.debug('addOrUpdate', item);
         let items = Array.isArray(item) ? item : [item];
         let itemsWithIds = items.map(x => Object.assign(x, {id: this.sanitize(x.path)}));
         let response = await fetch(`${this.url}/indexes/${this.index}/documents`, {
@@ -36,8 +36,10 @@ export class MeilisearchSearch implements ISearch {
             method: 'PUT',
             body: JSON.stringify(itemsWithIds)
         });
-        if (!(response.status >= 200 && response.status <= 299))
+        if (!(response.status >= 200 && response.status <= 299)) {
+            response.text().then(x => this.logger.error(x));
             throw new Error(`Response ended with status: ${response.status} ${response.statusText}`);
+        }
     }
 
     async get(path:string): Promise<SearchItem|null> {

@@ -14,5 +14,6 @@
 <style>
     .dir {
         font-family: monospace;
+        white-space: nowrap;
     }
 </style>
